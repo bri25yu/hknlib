@@ -18,9 +18,9 @@ def main():
     credentials = get_credentials("./secret/hknlib.json")
     election_data = get_election_data(credentials, MEMBER_RANGE)
     # TODO FIXME HACK
-    for line in election_data:
-        line.insert(5, "")
-    # print(election_data[0])
+    for signup in election_data:
+        signup.insert(5, "")
+    # print(election_data)
     add_users(credentials, election_data)
     add_members_to_committes(credentials, election_data)
 

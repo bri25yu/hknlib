@@ -11,13 +11,13 @@ from hknlib.election.users import add_users
 from hknlib.election.groups import add_all_to_committes
 
 # test_data = [
-#     ['12/2/2018 22:24:44', 'Test', 'User', 'test_user', 'jameszhu@hkn.eecs.berkeley.edu', 'compserv@'],
+#     ['12/2/2018 22:24:44', 'briantest01', 'briantest01', 'briantest01', 'brianyu@hkn.eecs.berkeley.edu', 'compserv@'],
 # ]
 
 def main():
     credentials = get_credentials("./secret/hknlib.json")
     election_data = get_election_data(credentials, NEW_OFFICER_RANGE)
-    #print(election_data)
+    # print(election_data)
     add_users(credentials, election_data)
     add_all_to_committes(credentials, election_data)
 

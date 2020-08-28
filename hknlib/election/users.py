@@ -10,8 +10,8 @@ from urllib.error import HTTPError
 
 EMAIL_SENDER = "hkn-ops@hkn.eecs.berkeley.edu"
 #Update when running scripts every year
-COMPSERV_OFFICERS = "Kevin Chen, Anthony Ding, Connie Huang, Brian Yu"
-COMPSERV_AOS = "Jeffrey Kim, Matthew Signorotti, Alexander Wu, Haolin Zhu"
+COMPSERV_OFFICERS = "Ashwin Ganesh, Brian Yu, Connie Huang, Rishabh Krishnan"
+COMPSERV_AOS = "Andrew Ke, Haolin Zhu, Oscar Chan, Steven Chen"
 
 def random_pass() -> str:
     rand = random.SystemRandom()
@@ -94,6 +94,7 @@ def generate_email_message(first_name, sender, hkn_email, receiver, password):
     message_text += ("Username: " + hkn_email + "\n")
     message_text += ("Password: " + password + "\n\n")
     message_text += "This same account is used to access the HKN Wiki (prot) at https://hkn.mu/prot, and the HKN Slack at https://hkn.slack.com. " 
+    message_text += "You can sign up for a Slack account at https://hkn.slack.com/signup. "
     message_text += "Please set your Slack display name (under Profile and Account) to your email username, so we can tag you.\n\n"
     message_text += "We've gathered a few notes about using your HKN accounts:\n\n"
     message_text += "1) These accounts are privilege given to you for HKN related business. DO NOT under any circumstances use them for any personal " 

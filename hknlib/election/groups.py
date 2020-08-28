@@ -25,11 +25,14 @@ def add_user_to_group(credentials, user, groupKey):
 def add_officers_to_committes(credentials, election_data):
     user_committee = []
     if election_data:
-        for i in range(0, len(election_data)):
-            if len(election_data[i]) < 6:
+        for signup in election_data:
+            if len(signup) < 6:
                 continue
-            committee = election_data[i][5][:-1]
-            user_committee.append((election_data[i][3], committee))
+            committee_selection = signup[5] # e.g. compserv@ or N/A
+            if committee_selection != 'N/A':
+                committee = committee_selection[:-1]
+                user = signup[3] # e.g. test_user
+                user_committee.append((user, committee))
             #user_committee[users[i]] = committee
 
     for user, committee in user_committee:
