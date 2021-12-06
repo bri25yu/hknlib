@@ -10,8 +10,8 @@ from urllib.error import HTTPError
 
 EMAIL_SENDER = "hkn-ops@hkn.eecs.berkeley.edu"
 #Update when running scripts every year
-COMPSERV_OFFICERS = "Ashwin Ganesh, Brian Yu, Connie Huang, Rishabh Krishnan"
-COMPSERV_AOS = "Andrew Ke, Haolin Zhu, Oscar Chan, Steven Chen"
+COMPSERV_OFFICERS = "Oscar Chan, Anthony Maltsev, Anirban Sarkar, Brian Yu"
+COMPSERV_AOS = "Yousef Helal, Sam Maher, Justin Zhang"
 
 def random_pass() -> str:
     rand = random.SystemRandom()
